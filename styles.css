@@ -404,3 +404,7 @@ header div img {
   margin-top: 20px;
   display: block;
 }
+
+#search-bar {
+  display: none;
+}

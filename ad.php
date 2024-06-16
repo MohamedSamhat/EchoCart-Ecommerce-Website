@@ -2,6 +2,8 @@
 include('dbconfig/connection.php');
 session_start();
 
+$hide_button = false;
+
 if(isset($_GET['action']) && isset($_GET['product_id']) && $_GET['action'] == 'deletead'){
     $product_id = $_GET['product_id'];
     $query = "DELETE FROM `products` WHERE `product_id` = '$product_id'";
@@ -158,7 +160,7 @@ function timeAgo($given_time_str) {
                     <li>Never pay anything in advance or transfer money before inspecting the product.</li>
                 </ul>
             </div>
-            <?php if(!$hide_button = true){?>
+            <?php if(!$hide_button == true){?>
             <button style="margin-left:30px; margin-top:20px;" class="profile-button" onclick="confirmDeletion()">Delete Post</button>
             <?php } ?>
         </div>
