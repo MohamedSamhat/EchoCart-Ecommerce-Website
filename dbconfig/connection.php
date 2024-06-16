@@ -1,7 +1,7 @@
 <?php
     $host="localhost";
-    $username="root";
-    $pass="Hassan@joud12";
+    $username="";
+    $pass="";
     $dbname="EchoCart";
 
     $con=mysqli_connect($host,$username,$pass,$dbname);
