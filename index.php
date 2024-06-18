@@ -1,0 +1,1 @@
+<?php header("signup.php")?>

@@ -108,7 +108,7 @@ function timeAgo($given_time_str) {
 </head>
 
 <body class="profile-body">
-    <?php require('header.php'); ?>
+    <?php require('header.php');?>
     <div class="profile-first-container">
         <div>
             <div>
@@ -126,7 +126,7 @@ function timeAgo($given_time_str) {
         <div>
             <div>
                 <span class="profile-name-container">
-                    <span style="width:100%; display:block;"><?php echo "<h1 style='color:#01112b; text-align:left;'>" . $first_name . " " . $last_name . " (" . $_SESSION['user_info']['username'] . ")</h1>"; ?></span>
+                    <span style="width:100%; display:block;"><?php echo "<h1 style='color:#01112b; text-align:left;'>" . $first_name . " " . $last_name . " ("; if(isset($_GET['ad_user_id'])){echo $user_row['username'].")</h1>"; }else{echo $_SESSION['user_info']['username'].")</h1>";} ; ?></span>
                 </span>
             </div>
             <div>
@@ -161,7 +161,7 @@ function timeAgo($given_time_str) {
                         ?>
                             <a href="ad.php?product_id=<?php echo($product_id)?>">
                             <div style="width:280px; height:330px; margin-bottom: 10px; border: 2px solid #01112b; ">
-                                <img src="<?php echo $product_image; ?>" width="100%" height="175px" alt="img" >
+                                <img src="<?php echo $product_image; ?>" width=100% height="175px" alt="img" >
                                 <p style="color:red; font-size:20px; padding-left:7px; font-weight:bold">USD <?php echo ($price_dollar) ?></p>
                                 <p style="padding-left:7px; color:#01112b; font-weight:bold;"><?php echo ($title) ?></p>
                                 <p style="padding-left:7px; color:#01112b;"><?php echo ($category_name) ?></p>
